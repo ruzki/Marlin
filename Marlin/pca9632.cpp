@@ -38,35 +38,35 @@
 #define PCA9632_LEDOUT_VALUE  0b00101010
 
 /* Register addresses */
-#define PCA9632_MODE1       0x00
-#define PCA9632_MODE2       0x01
+#define PCA9632_MODE1       0x80
+#define PCA9632_MODE2       0x1C
 #define PCA9632_PWM0        0x02
 #define PCA9632_PWM1        0x03
 #define PCA9632_PWM2        0x04
-#define PCA9632_PWM3        0x05
-#define PCA9632_GRPPWM      0x06
-#define PCA9632_GRPFREQ     0x07
-#define PCA9632_LEDOUT      0x08
-#define PCA9632_SUBADR1     0x09
-#define PCA9632_SUBADR2     0x0A
-#define PCA9632_SUBADR3     0x0B
-#define PCA9632_ALLCALLADDR 0x0C
+#define PCA9632_PWM3        0x00
+#define PCA9632_GRPPWM      0xFF
+#define PCA9632_GRPFREQ     0x00
+#define PCA9632_LEDOUT      0xAA
+//#define PCA9632_SUBADR1     0x09
+//#define PCA9632_SUBADR2     0x0A
+//#define PCA9632_SUBADR3     0x0B
+//#define PCA9632_ALLCALLADDR 0x0C
 
-#define PCA9632_NO_AUTOINC  0x00
-#define PCA9632_AUTO_ALL    0x80
-#define PCA9632_AUTO_IND    0xA0
-#define PCA9632_AUTOGLO     0xC0
-#define PCA9632_AUTOGI      0xE0
+//#define PCA9632_NO_AUTOINC  0x00
+//#define PCA9632_AUTO_ALL    0x80
+#define PCA9632_AUTO_IND    0x00
+//#define PCA9632_AUTOGLO     0xC0
+//#define PCA9632_AUTOGI      0xE0
 
 // Red   LED0
 // Green LED1
 // Blue  LED2
-#define PCA9632_RED     0x00
-#define PCA9632_GRN     0x02
-#define PCA9632_BLU     0x04
+#define PCA9632_RED     0x04
+#define PCA9632_GRN     0x01
+#define PCA9632_BLU     0x02
 
-#define LED_OFF   0x00
-#define LED_ON    0x01
+#define LED_OFF   0x01
+#define LED_ON    0xC0
 #define LED_PWM   0x02
 
 #define PCA9632_ADDRESS 0b01100000

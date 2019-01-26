@@ -149,8 +149,8 @@
   #define LCD_CONTRAST_MIN 0
   #define LCD_CONTRAST_MAX 254
   #define DEFAULT_LCD_CONTRAST 127
-  #define ENCODER_PULSES_PER_STEP 2
-  #define ENCODER_STEPS_PER_MENU_ITEM 2
+  //#define ENCODER_PULSES_PER_STEP 2 //GGE
+  //#define ENCODER_STEPS_PER_MENU_ITEM 2 //GGE
 #endif
 
 // Generic support for SSD1306 / SSD1309 / SH1106 OLED based LCDs.
@@ -282,7 +282,7 @@
     #ifdef LCD_WIDTH_OVERRIDE
       #define LCD_WIDTH LCD_WIDTH_OVERRIDE
     #else
-      #define LCD_WIDTH 22
+      #define LCD_WIDTH 16
     #endif
   #endif
   #ifndef LCD_HEIGHT
@@ -298,7 +298,7 @@
   #define NEWPANEL  // Disable this if you actually have no click-encoder panel
   #define ULTRA_LCD
   #ifndef LCD_WIDTH
-    #define LCD_WIDTH 20
+    #define LCD_WIDTH 18
   #endif
   #ifndef LCD_HEIGHT
     #define LCD_HEIGHT 4
