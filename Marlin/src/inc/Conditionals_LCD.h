@@ -228,7 +228,7 @@
   #define LCD_I2C_ADDRESS 0x27   // I2C Address of the port expander
 
   #if ENABLED(LCD_SAINSMART_I2C_2004)
-    #define LCD_WIDTH 20
+    #define LCD_WIDTH 18
     #define LCD_HEIGHT 4
   #endif
 
@@ -258,8 +258,8 @@
 
   #define ENCODER_FEEDRATE_DEADZONE 4
 
-  #define STD_ENCODER_PULSES_PER_STEP 1
-  #define STD_ENCODER_STEPS_PER_MENU_ITEM 2
+  // #define STD_ENCODER_PULSES_PER_STEP 1
+  // #define STD_ENCODER_STEPS_PER_MENU_ITEM 2
 
 #elif ENABLED(G3D_PANEL)
 

@@ -68,7 +68,7 @@
 
   #define Z_STEP_PIN 37
   #define Z_DIR_PIN 39
-  #define Z_MIN_PIN -1 // Test for BL-Touch JC: Changed from 30 in GGC source
+  #define Z_MIN_PIN 30 // Test for BL-Touch JC: Changed from 30 in GGC source
   #define Z_MIN_PROBE_PIN 11// Test for BL-Touch
   #define SERVO0_PIN 46 // Test for BL-Touch
   #define Z_MAX_PIN 32
@@ -92,16 +92,16 @@
   #define E1_ENABLE_PIN       48
 
   #define SDSS                53
-  #define LED_PIN             13 // JC: According to the MarlinForOverlord source this should be 13
+  #define LED_PIN             8 // JC: According to the MarlinForOverlord source this should be 13
   #define FAN_PIN             7
 
-  #define PS_ON_PIN           -1 //JC: Changed from 12 in GGE Source
+  #define PS_ON_PIN           12 //JC: Changed from 12 in GGE Source
   #define EXP_VOLTAGE_LEVEL_PIN 34 //GGE Test
  
 //  #define KILL_PIN           -1 // JC: uncommented
 //  #define SUICIDE_PIN        -1  // JC: This was set to 12 and commented reset to -1 //PIN that has to be turned on right after start, to keep power flowing.
- #define SLEEP_PIN 12          // JC: Enabled and set from 6 to 12
- #define ENERGE_PIN 6        // JC: Enabled and changed from 12 to 6 // Not exsisting for Marlin
+ #define SLEEP_PIN 6          
+ #define ENERGE_PIN 12        // Not exsisting for Marlin
 
   #define BTN_ENC 16          //GGE Enter Pin
   #define BTN_UP 17             //GGE Button UP Pin JC: Reverted Invert from OLP Source
