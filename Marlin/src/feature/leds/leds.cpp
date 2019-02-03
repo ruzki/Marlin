@@ -34,6 +34,10 @@
   #include "blinkm.h"
 #endif
 
+#if ENABLED(PCA9632_OVERLORD)
+  #include "pca9632_OVERLORD.h"
+#endif
+
 #if ENABLED(PCA9632)
   #include "pca9632.h"
 #endif
@@ -126,7 +130,7 @@ void LEDLights::set_color(const LEDColor &incol
 
   #endif
 
-  #if ENABLED(PCA9632)
+  #if ENABLED(PCA9632) || ENABLED(PCA9632_OVERLORD)
     // Update I2C LED driver
     pca9632_set_led_color(incol);
   #endif

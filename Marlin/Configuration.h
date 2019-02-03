@@ -2081,7 +2081,10 @@
 //#define BLINKM
 
 // Support for PCA9632 PWM LED driver
-#define PCA9632
+// #define PCA9632
+
+// Support for PCA9632 PWM LED driver Overlord version
+#define PCA9632_OVERLORD
 
 // Support for PCA9533 PWM LED driver
 // https://github.com/mikeshub/SailfishRGB_LED
@@ -2141,7 +2144,7 @@
  *  - Change to green once print has finished
  *  - Turn off after the print has finished and the user has pushed a button
  */
-#if ENABLED(BLINKM) || ENABLED(RGB_LED) || ENABLED(RGBW_LED) || ENABLED(PCA9632) || ENABLED(NEOPIXEL_LED)
+#if ENABLED(BLINKM) || ENABLED(RGB_LED) || ENABLED(RGBW_LED) || ENABLED(PCA9632) || ENABLED(PCA9632_OVERLORD) || ENABLED(NEOPIXEL_LED)
   #define PRINTER_EVENT_LEDS
 #endif
 
