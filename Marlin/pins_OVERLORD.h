@@ -92,7 +92,7 @@
   #define E1_ENABLE_PIN       48
 
   #define SDSS                53
-  #define LED_PIN             8
+  #define LED_PIN             13 // JC: According to the MarlinForOverlord source this should be 13
   #define FAN_PIN             7
 
   #define PS_ON_PIN           12
