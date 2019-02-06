@@ -104,8 +104,8 @@
  #define ENERGE_PIN 12        // Not exsisting for Marlin
 
   #define BTN_ENC 16          //GGE Enter Pin
-  #define BTN_UP 17             //GGE Button UP Pin JC: Reverted Invert from OLP Source
-  #define BTN_DWN  19           //GGE Button DOWN Pin JC: Reverted Invert from OLP Source
+  #define BTN_UP 19             //GGE Button UP Pin
+  #define BTN_DWN  17           //GGE Button DOWN Pin
 
   #ifdef FilamentDetection
   #define FilamentDetectionPin 46
