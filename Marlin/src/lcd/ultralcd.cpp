@@ -22,6 +22,10 @@
 
 #include "../inc/MarlinConfigPre.h"
 
+// Overlord Speed scrolling //
+#define OVLCTRL_ADDRESS 0b1100000 // GGE Address from Dreammaker Source
+uint8_t btn_cntr = 0;
+
 // These displays all share the MarlinUI class
 #if HAS_SPI_LCD || ENABLED(MALYAN_LCD) || ENABLED(EXTENSIBLE_UI)
   #include "ultralcd.h"
@@ -1056,17 +1060,35 @@ void MarlinUI::update() {
             // for the else-ifs below
           }
           #if BUTTON_EXISTS(UP)
-            else if (BUTTON_PRESSED(UP)) {
+            else if (BUTTON_PRESSED(UP) && btn_cntr <= 9) {
+              btn_cntr = btn_cntr + 1; 
               encoderDiff = (ENCODER_STEPS_PER_MENU_ITEM) * pulses;
               next_button_update_ms = now + 300;
             }
+            else if (BUTTON_PRESSED(UP) && btn_cntr >= 9) {
+              btn_cntr = btn_cntr + 1; 
+              encoderDiff = (ENCODER_STEPS_PER_MENU_ITEM) * pulses;
+              next_button_update_ms = now + 150;
+            }
           #endif
           #if BUTTON_EXISTS(DWN)
-            else if (BUTTON_PRESSED(DWN)) {
+            else if (BUTTON_PRESSED(DWN) && btn_cntr <= 9) {
+              btn_cntr = btn_cntr + 1; 
               encoderDiff = -(ENCODER_STEPS_PER_MENU_ITEM) * pulses;
               next_button_update_ms = now + 300;
             }
+            else if (BUTTON_PRESSED(DWN) && btn_cntr >= 9) {
+              btn_cntr = btn_cntr + 1; 
+              encoderDiff = -(ENCODER_STEPS_PER_MENU_ITEM) * pulses;
+              next_button_update_ms = now + 150;
+            }
           #endif
+            else if (!BUTTON_PRESSED(DWN)) { 
+              btn_cntr = 0;
+            }
+            else if (!BUTTON_PRESSED(UP)) { 
+              btn_cntr = 0;
+            }
           #if BUTTON_EXISTS(LFT)
             else if (BUTTON_PRESSED(LFT)) {
               encoderDiff = -pulses;
